@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #111827;
+}
+
+main {
+  margin: 0 16px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+header h1 {
+  color: #e5e7eb;
+  font-family: "Black Ops One";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+header h1 span {
+  color: #0ea5e9;
+  font-family: "Black Ops One";
+}
+
+.content, app-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Responsive with mobile first */
+
+/* Phone */
+@media (min-width: 375px) {
+}
+
+/* Tablet */
+@media (min-width: 744px) {
+  main {
+    margin: 0 80px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  main {
+    margin: 0 160px;
+  }
+}

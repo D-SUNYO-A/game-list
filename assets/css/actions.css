@@ -1,0 +1,27 @@
+.actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+app-search {
+  width: 100%;
+}
+
+/* Responsive with mobile first */
+
+/* Phone */
+@media (min-width: 375px) {
+}
+
+/* Tablet */
+@media (min-width: 744px) {
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .actions {
+    gap: 24px;
+  }
+}

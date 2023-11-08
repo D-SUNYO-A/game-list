@@ -1,0 +1,55 @@
+button {
+  display: none;
+  padding: 12px 14px 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: #1f2937;
+}
+
+button span {
+  color: #e5e7eb;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: #1f2937;
+}
+
+/* Responsive with mobile first */
+
+/* Phone */
+@media (min-width: 375px) {
+}
+
+/* Tablet */
+@media (min-width: 744px) {
+  button {
+    display: flex;
+  }
+
+  .icon-btn {
+    display: none;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+}
