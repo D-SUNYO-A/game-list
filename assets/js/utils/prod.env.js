@@ -7,3 +7,6 @@ export const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=${DATES}&o
 
 // URL pour la liste des plateformes parents
 export const platformsParentsUrl = `https://api.rawg.io/api/platforms/lists/parents?key=${APIKEY}&dates=${DATES}&ordering=${ORDERING}`
+
+// URL pour la recherche de jeux
+export const searchUrl = query => `https://api.rawg.io/api/games?key=${APIKEY}&dates=${DATES}&ordering=${ORDERING}&search=${query}`;

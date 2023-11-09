@@ -4,7 +4,7 @@ export const eventBus = new class {
     }
 
     fire(eventName, data) {
-        this.el.dispatchEvent(new CustomEvent(eventName, { details: data }))
+        this.el.dispatchEvent(new CustomEvent(eventName, { detail: data }))
     }
 
     register(eventName, callback) {

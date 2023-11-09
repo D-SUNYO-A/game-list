@@ -1,12 +1,31 @@
-export class SearchComponent extends HTMLElement {
-    constructor() {
-        super();
-        this.root = this.attachShadow({ mode: 'closed' })
-        this.render();
-    }
+import { eventBus } from "../services/EventBus.js";
+import { gameService } from "../services/GameService.js";
 
-    render() {
-        this.root.innerHTML = `
+export class SearchComponent extends HTMLElement {
+  constructor() {
+    super();
+    this.root = this.attachShadow({ mode: "closed" });
+    this.render();
+    this.connectedCallback();
+  }
+
+  connectedCallback() {
+    const input = this.root.querySelector("input");
+    input.addEventListener("input", this.handleSearch.bind(this));
+  }
+
+  handleSearch(event) {
+    const searchTerm = event.target.value;
+    if (searchTerm.length >= 3) {
+      gameService.searchGameData(searchTerm).then((searchResults) => {
+        eventBus.fire('searchResultsReady', searchResults);
+        console.log(searchResults);
+      });
+    }
+  }
+
+  render() {
+    this.root.innerHTML = `
             <link rel="stylesheet" href="./assets/css/style.css" />
             <link rel="stylesheet" href="./assets/css/search.css" />
 
@@ -16,8 +35,8 @@ export class SearchComponent extends HTMLElement {
                 </svg>
                 <input type="text" placeholder="Search..." />
             </div>
-        `
-    }
+        `;
+  }
 }
 
-window.customElements.define('app-search', SearchComponent);
+window.customElements.define("app-search", SearchComponent);

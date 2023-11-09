@@ -15,7 +15,6 @@ export class ActionsComponent extends HTMLElement {
 
             <div class="actions">
                 <app-search></app-search>
-                <app-filter></app-filter>
             </div>
         `
     }
